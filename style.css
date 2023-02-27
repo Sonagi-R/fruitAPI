@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 99vh;
+    overflow: hidden;
+}
+ 
+#inputSection{
+    height: 20%;
+    margin-top: 100px;
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+    height: 15px;
+    padding: 20px;
+    border-radius: 9999px;
+    background-color: paleturquoise;
+    margin-bottom: 10px;
+}

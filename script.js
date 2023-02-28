@@ -1,4 +1,4 @@
-const apiKey = require("./apiKey") 
+const apiKey = process.env.APIKEY
 
 
 const fruitForm = document.querySelector('#fruitForm')
@@ -37,7 +37,7 @@ function addFruit(fruit) {
 
     fetch(`https://pixabay.com/api/?key=${apiKey}&q=${fruit}+fruit&image_type=photo`)
         .then((response) => response.json())
-        .then((data) => img.src = `${data.hits[5].largeImageURL}`)
+        .then((data) => img.src = `${data.hits[randomNum].largeImageURL}`)
         .catch(()=> img.src = "https://via.placeholder.com/150")
 
 }

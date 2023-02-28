@@ -3,8 +3,11 @@ body{
     align-items: center;
     flex-direction: column;
     height: 99vh;
-    overflow: hidden;
 }
+
+body::-webkit-scrollbar{
+    display: none;
+  }
  
 #inputSection{
     height: 5%;

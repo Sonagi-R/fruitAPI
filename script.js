@@ -19,9 +19,9 @@ function addFruit(fruit) {
     const li = document.createElement('li')
     const card = document.createElement('div')
     const img = document.createElement('img')
-    let x = 0
+    let randomNum = Math.floor(Math.random()*40)
 
-    fetch(`https://fruity-api.onrender.com/fruits/${fruit}`)
+    fetch(`https://fruity-api-0y87.onrender.com/fruits/${fruit}`)
         .then((response) => response.json())
         .then((data) => {
             li.textContent = JSON.stringify(data.nutritions)
@@ -37,7 +37,7 @@ function addFruit(fruit) {
 
     fetch(`https://pixabay.com/api/?key=${apiKey}&q=${fruit}+fruit&image_type=photo`)
         .then((response) => response.json())
-        .then((data) => img.src = `${data.hits[0].largeImageURL}`)
+        .then((data) => img.src = `${data.hits[5].largeImageURL}`)
         .catch(()=> img.src = "https://via.placeholder.com/150")
 
 }
